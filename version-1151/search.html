@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影片搜索-最新影片大全</title>
+<meta name="description" content="全站影片搜索与筛选，支持片名、地区、类型、年份、标签和剧情关键词查询。">
+<meta name="keywords" content="最新影片大全,最新影片,影片更新,高清播放,热门影片,影片合集,影片搜索,影片筛选">
+<link rel="stylesheet" href="assets/theme.css">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center space-x-2 group" aria-label="最新影片大全首页">
+        <span class="logo-mark">▶</span>
+        <span class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">最新影片大全</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="categories.html" class="nav-link">分类</a>
+        <a href="category-suspense-crime.html" class="nav-link">悬疑犯罪</a><a href="category-scifi-fantasy.html" class="nav-link">科幻奇幻</a><a href="category-comedy-healing.html" class="nav-link">喜剧治愈</a><a href="category-romance-youth.html" class="nav-link">爱情青春</a><a href="category-action-adventure.html" class="nav-link">动作冒险</a><a href="category-horror-thriller.html" class="nav-link">惊悚恐怖</a>
+        <a href="ranking.html" class="nav-link">热播榜</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <form action="search.html" method="get" class="hidden sm:block">
+          <div class="relative">
+            <input type="text" name="q" placeholder="搜索影片..." class="search-input w-48 lg:w-64" aria-label="搜索影片">
+            <span class="search-icon">⌕</span>
+          </div>
+        </form>
+        <button type="button" class="mobile-menu-button md:hidden" aria-label="打开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu md:hidden hidden border-t border-neutral-200 bg-white">
+    <div class="px-4 py-4 space-y-3">
+      <a href="index.html" class="mobile-nav-link">首页</a>
+      <a href="categories.html" class="mobile-nav-link">分类总览</a>
+      <a href="category-suspense-crime.html" class="mobile-nav-link">悬疑犯罪</a><a href="category-scifi-fantasy.html" class="mobile-nav-link">科幻奇幻</a><a href="category-comedy-healing.html" class="mobile-nav-link">喜剧治愈</a><a href="category-romance-youth.html" class="mobile-nav-link">爱情青春</a><a href="category-action-adventure.html" class="mobile-nav-link">动作冒险</a><a href="category-horror-thriller.html" class="mobile-nav-link">惊悚恐怖</a><a href="category-costume-history.html" class="mobile-nav-link">古装历史</a><a href="category-urban-career.html" class="mobile-nav-link">都市职场</a><a href="category-family-life.html" class="mobile-nav-link">家庭生活</a><a href="category-art-music.html" class="mobile-nav-link">文艺音乐</a><a href="category-documentary-variety.html" class="mobile-nav-link">纪录综艺</a><a href="category-drama-selected.html" class="mobile-nav-link">剧情精选</a>
+      <a href="ranking.html" class="mobile-nav-link">热播榜</a>
+      <form action="search.html" method="get" class="sm:hidden pt-2">
+        <div class="relative">
+          <input type="text" name="q" placeholder="搜索影片..." class="search-input w-full" aria-label="搜索影片">
+          <span class="search-icon">⌕</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <nav class="breadcrumb"><a href="index.html">首页</a><span>/</span><span>影片搜索</span></nav>
+  <section class="page-hero-card">
+    <span class="eyebrow">全站搜索</span>
+    <h1 class="text-4xl sm:text-5xl font-bold text-neutral-900 mb-4">搜索 / 筛选影片</h1>
+    <p class="text-lg text-neutral-600 max-w-3xl">输入片名、类型、地区、年份、标签或剧情关键词，快速查找全站 2000 部影片。</p>
+  </section>
+  <section class="search-page-panel" data-search-page>
+    <div class="search-page-controls">
+      <input type="search" class="quick-search-input" data-search-query placeholder="搜索片名、剧情、标签、地区..." aria-label="搜索关键词">
+      <select class="filter-input" data-search-category aria-label="选择分类">
+        <option value="">全部分类</option>
+        <option value="suspense-crime">悬疑犯罪</option><option value="scifi-fantasy">科幻奇幻</option><option value="comedy-healing">喜剧治愈</option><option value="romance-youth">爱情青春</option><option value="action-adventure">动作冒险</option><option value="horror-thriller">惊悚恐怖</option><option value="costume-history">古装历史</option><option value="urban-career">都市职场</option><option value="family-life">家庭生活</option><option value="art-music">文艺音乐</option><option value="documentary-variety">纪录综艺</option><option value="drama-selected">剧情精选</option>
+      </select>
+      <button type="button" class="quick-search-button" data-search-button>搜索</button>
+    </div>
+    <p class="filter-result" data-search-summary></p>
+  </section>
+  <section class="mt-10">
+    <div class="movie-grid" data-search-results></div>
+  </section>
+</main>
+<script src="assets/movies-search.js"></script>
+<footer class="bg-neutral-900 text-white mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <span class="logo-mark">▶</span>
+          <span class="text-2xl font-bold">最新影片大全</span>
+        </div>
+        <p class="text-neutral-300 leading-relaxed">整理近期更新的影片内容，覆盖多地区、多题材和热门分类栏目。</p>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold mb-4">快速入口</h2>
+        <div class="grid grid-cols-2 gap-2 text-sm">
+          <a href="index.html" class="footer-link">首页</a>
+          <a href="categories.html" class="footer-link">分类总览</a>
+          <a href="ranking.html" class="footer-link">热播榜</a>
+          <a href="search.html" class="footer-link">影片搜索</a>
+          <a href="category-suspense-crime.html" class="footer-link">悬疑犯罪</a><a href="category-scifi-fantasy.html" class="footer-link">科幻奇幻</a><a href="category-comedy-healing.html" class="footer-link">喜剧治愈</a><a href="category-romance-youth.html" class="footer-link">爱情青春</a><a href="category-action-adventure.html" class="footer-link">动作冒险</a><a href="category-horror-thriller.html" class="footer-link">惊悚恐怖</a><a href="category-costume-history.html" class="footer-link">古装历史</a><a href="category-urban-career.html" class="footer-link">都市职场</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold mb-4">观看提示</h2>
+        <p class="text-neutral-300 text-sm leading-relaxed">页面内容采用静态 HTML 输出，影片信息、分类、详情、相关推荐均可直接浏览。播放器支持点击后初始化 HLS 播放。</p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-8 pt-6 text-sm text-neutral-400">© 2026 最新影片大全. All rights reserved.</div>
+  </div>
+</footer>
+<script type="module" src="assets/player-loader.js"></script>
+<script src="assets/site.js" defer></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索热门影片-国产热门影片</title>
+  <meta name="description" content="搜索国产热门影片、国产影片、热门影片片库和影片点播内容。">
+  <meta name="keywords" content="国产热门影片,国产影片,热门影片,影片片库,影片点播,华语电影,高清影片,影片搜索">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-logo" href="./index.html" aria-label="国产热门影片">
+    <span class="logo-mark">影</span>
+    <span class="logo-text">国产热门影片</span>
+  </a>
+  <button class="nav-toggle" type="button" data-nav-toggle aria-label="打开菜单">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="site-nav" data-site-nav>
+    <a href="./index.html" class="nav-link ">首页</a>
+<a href="./category-all.html" class="nav-link ">片库</a>
+<a href="./categories.html" class="nav-link ">分类</a>
+<a href="./ranking.html" class="nav-link ">排行榜</a>
+<a href="./search.html" class="nav-link active">搜索</a>
+  </nav>
+</header>
+<main>
+
+<section class="page-hero">
+  <p>全站检索</p>
+  <h1>搜索热门影片</h1>
+  <p>输入片名、地区、年份、题材或标签，快速定位影片详情页和播放入口。</p>
+</section>
+<form class="search-form" data-search-form>
+  <input type="search" data-search-input placeholder="输入影片关键词" aria-label="搜索影片">
+  <button type="submit">搜索</button>
+</form>
+<section class="search-shell">
+  <div class="movie-grid search-results" data-search-results></div>
+  <div class="empty-state" data-empty-state>未找到相关影片</div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <strong>国产热门影片</strong>
+      <p>国产热门影片栏目收录关注度较高的华语影片，便于按题材、年份和热度浏览。</p>
+    </div>
+    <div class="footer-links">
+      <a href="./index.html">首页</a>
+      <a href="./category-all.html">片库</a>
+      <a href="./categories.html">分类</a>
+      <a href="./ranking.html">排行榜</a>
+      <a href="./search.html">搜索</a>
+    </div>
+  </div>
+</footer>
+  <script src="./assets/js/app.js" defer></script>
+  <script src="./assets/js/movies-data.js" defer></script>
+  <script src="./assets/js/search.js" defer></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
